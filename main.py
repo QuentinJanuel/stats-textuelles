@@ -73,7 +73,16 @@ animes = {
             "extractor": get_dialogues_ass,
         },
     },
-    "edo": {},
+    "edo": {
+        "gintama": {
+            "files": [(i, os.path.join(
+                os.getcwd(),
+                "gintama",
+                f"sub{str(i).zfill(3)}.srt",
+            )) for i in range(1, 12 + 1)],
+            "extractor": get_dialogues_srt,
+        },
+    },
     "contemporain_edo": {
         "inuyasha": {
             "files": [(i, os.path.join(
