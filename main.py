@@ -100,6 +100,14 @@ animes = {
             )) for i in range(1, 12 + 1)],
             "extractor": get_dialogues_srt,
         },
+        "yashahime": {
+            "files": [(i, os.path.join(
+                os.getcwd(),
+                "yashahime",
+                f"半妖の夜叉姫.S01E{str(i).zfill(2)}.srt",
+            )) for i in range(1, 12 + 1)],
+            "extractor": get_dialogues_srt,
+        },
     },
 }
 
