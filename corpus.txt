@@ -1,6 +1,6 @@
-<contemporain>
+<category="contemporain">
 
-<nichijou>
+<anime="nichijou">
 
 （相生祐子(あいおいゆうこ)）ああ
 （長野原(ながのはら)みお）
@@ -6397,9 +6397,9 @@ OH(オウ)！ スリップストリーム
 次回の「日常」は第13話
 お楽しみに
 §
-</nichijou>
+<anime="nichijou">
 
-<barakamon>
+<anime="barakamon">
 
 まだ若いのに　型に嵌った字を書くね
 手本のような字と言うべきか
@@ -10697,13 +10697,13 @@ OH(オウ)！ スリップストリーム
 よう分からん
 帰ってきって嬉か　なる
 §
-</barakamon>
+<anime="barakamon">
 
-</contemporain>
+</category="contemporain">
 
-<edo>
+<category="edo">
 
-<gintama>
+<anime="gintama">
 
 はあっ
 いざ尋常に
@@ -16570,9 +16570,9 @@ I pray…“信じて”
 -感動超大作 「となりのペドロ」
 同時上映 「ゲロ戦記」
 §
-</gintama>
+<anime="gintama">
 
-<basilisk>
+<anime="basilisk">
 
 （語り）憎しみ合う者たちがいた
 骸(むくろ)は野に朽ち 御霊(みたま)は血に染(そ)み
@@ -20676,13 +20676,13 @@ I pray…“信じて”
 それは修羅の道行き
 次回「バジリスク～甲賀忍法帖～」
 §
-</basilisk>
+<anime="basilisk">
 
-</edo>
+</category="edo">
 
-<contemporain_edo>
+<category="contemporain_edo">
 
-<inuyasha>
+<anime="inuyasha">
 
 -犬夜叉だーっ
 -うわーっ
@@ -25981,9 +25981,9 @@ I pray…“信じて”
 お楽しみに
 犬夜叉のツボ
 §
-</inuyasha>
+<anime="inuyasha">
 
-<yashahime>
+<anime="yashahime">
 
 （雨の音）
 （家臣）御入(おい)り〜！
@@ -32876,7 +32876,7 @@ I pray…“信じて”
 さぁて どんだけ うまいかなぁ
 いただきま〜す！
 §
-</yashahime>
+<anime="yashahime">
 
-</contemporain_edo>
+</category="contemporain_edo">
 
