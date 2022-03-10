@@ -82,6 +82,14 @@ animes = {
             )) for i in range(1, 12 + 1)],
             "extractor": get_dialogues_srt,
         },
+        "basilisk": {
+            "files": [(i, os.path.join(
+                os.getcwd(),
+                "basilisk",
+                f"Basilisk.S01E{str(i).zfill(2)}.JA.srt",
+            )) for i in range(1, 12 + 1)],
+            "extractor": get_dialogues_srt,
+        },
     },
     "contemporain_edo": {
         "inuyasha": {
