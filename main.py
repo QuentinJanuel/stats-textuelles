@@ -33,6 +33,10 @@ def get_dialogues_srt(file_name):
     return dialogues[1:]
 
 
+def clean(before):
+    return before.replace("{\\an8}", "")
+
+
 # fugashi_tagger = Tagger("-Owakati")
 janome_t = Tokenizer()
 
@@ -122,11 +126,11 @@ with open("corpus.txt", "w") as f:
                 dialogues = get_dialogues(file)
                 # f.write(f"<episode{i}>" + "\n")
                 for dialogue in dialogues:
-                    f.write(dialogue + "\n")
+                    f.write(clean(dialogue) + "\n")
                 f.write("§\n")
                 # f.write(f"</episode{i}>" + "\n\n")
-            f.write(f"<anime=\"{anime}\">" + "\n\n")
-        f.write(f"</category=\"{category}\">" + "\n\n")
+            f.write(f"</anime>" + "\n\n")
+        f.write(f"</category>" + "\n\n")
 
 
 # analyze_fugashi(dialogues[1])
