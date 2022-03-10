@@ -1,6 +1,7 @@
 import os
 # from fugashi import Tagger
 from janome.tokenizer import Tokenizer
+import re
 
 
 def get_dialogues_ass(file_name):
@@ -33,8 +34,16 @@ def get_dialogues_srt(file_name):
     return dialogues[1:]
 
 
-def clean(before):
-    return before.replace("{\\an8}", "")
+def clean(text):
+    if text == "♪～":
+        return ""
+    if text == "～♪":
+        return ""
+    text = text.replace("♪", "")
+    text = text.replace("{\\an8}", "")
+    text = re.sub(r"\(.*\)", "", text)
+    text = re.sub("（.*）", "", text)
+    return text
 
 
 # fugashi_tagger = Tagger("-Owakati")
@@ -126,7 +135,10 @@ with open("corpus.txt", "w") as f:
                 dialogues = get_dialogues(file)
                 # f.write(f"<episode{i}>" + "\n")
                 for dialogue in dialogues:
-                    f.write(clean(dialogue) + "\n")
+                    cleaned = clean(dialogue)
+                    if len(cleaned) == 0:
+                        continue
+                    f.write(cleaned + "\n")
                 f.write("§\n")
                 # f.write(f"</episode{i}>" + "\n\n")
             f.write(f"</anime>" + "\n\n")
