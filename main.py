@@ -120,10 +120,11 @@ with open("corpus.txt", "w") as f:
             get_dialogues = data["extractor"]
             for i, file in files:
                 dialogues = get_dialogues(file)
-                f.write(f"<episode{i}>" + "\n")
+                # f.write(f"<episode{i}>" + "\n")
                 for dialogue in dialogues:
                     f.write(dialogue + "\n")
-                f.write(f"</episode{i}>" + "\n\n")
+                f.write("§\n")
+                # f.write(f"</episode{i}>" + "\n\n")
             f.write(f"</{anime}>" + "\n\n")
         f.write(f"</{category}>" + "\n\n")
 
