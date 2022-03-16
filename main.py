@@ -126,23 +126,21 @@ animes = {
 
 with open("corpus.txt", "w") as f:
     for category, cat_animes in animes.items():
-        f.write(f"<category=\"{category}\">" + "\n\n")
+        f.write(f"<category=\"{category}\">" + "\n")
         for anime, data in cat_animes.items():
-            f.write(f"<anime=\"{anime}\">" + "\n\n")
+            f.write(f"<anime=\"{anime}\">" + "\n")
             files = data["files"]
             get_dialogues = data["extractor"]
             for i, file in files:
+                f.write(f"<episode=\"{i}\">" + "\n")
                 dialogues = get_dialogues(file)
-                # f.write(f"<episode{i}>" + "\n")
                 for dialogue in dialogues:
                     cleaned = clean(dialogue)
                     if len(cleaned) == 0:
                         continue
-                    f.write(cleaned + "\n")
-                f.write("§\n")
-                # f.write(f"</episode{i}>" + "\n\n")
-            f.write(f"</anime>" + "\n\n")
-        f.write(f"</category>" + "\n\n")
-
+                    f.write(cleaned + "§\n")
+                f.write("</episode>" + "\n")
+            f.write("</anime>" + "\n")
+        f.write("</category>" + "\n")
 
 # analyze_fugashi(dialogues[1])
