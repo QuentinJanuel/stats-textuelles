@@ -35,14 +35,12 @@ def get_dialogues_srt(file_name):
 
 
 def clean(text):
-    if text == "♪～":
-        return ""
-    if text == "～♪":
-        return ""
     text = text.replace("♪", "")
     text = text.replace("{\\an8}", "")
     text = re.sub(r"\(.*\)", "", text)
     text = re.sub("（.*）", "", text)
+    if text == "〜":
+        return ""
     return text
 
 
